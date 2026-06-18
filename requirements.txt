@@ -5,4 +5,7 @@ matplotlib
 scikit-learn
 # sys
 dill 
+xgboost
+DecisionTree
+catboost
 -e .
