@@ -47,10 +47,51 @@ class ModelTrainer:
             
                 
             }
-            model_report:dict=evaluate_models(X_train=X_train,Y_train=Y_train,X_test=X_test,Y_test=Y_test,models=models )
+            params={
+                "Random Forest":{
+                    "n_estimators":[8,16,32,54,64,128,256]
+                    },
+                "Decision Tree":{
+                    "criterion":["squared_error","friedman_mse","absolute_error","poisson"]
+                     },
+                
+                "Gradient Boosting":{
+                    "learning_rate":[.1,0.01,.001,.005,.5],
+                    "subsample":[0.6,0.7,.75,.85,.8],
+                    'n_estimators':[8,16,32,54,128,256]
+                        },
+                
+                "XGBoost":{
+                    "learning_rate":[.1,.001,.5,.005],
+                    "n_estimators":[8,16,32,56,128,256]
+                },
+                
+                'linear Regressor':{},
+                "K-Neighbors":{
+                    "n_neighbors":[5,7,9,11]
+                },
+                
+                "CatBoosting":{
+                    
+                    "learning_rate":[.1,.001,.5,.005],
+                    "depth":[6,8,9],
+                    "iterations":[30,50,100]
+                },
+                'AdaBoost':{
+                    "learning_rate":[.1,.001,.05,.5],
+                    "n_estimators":[8,16,32,54,128,256]
+                }
+                
+
+                
+                
+                
+            }
+                        
+            model_report:dict=evaluate_models(X_train=X_train,Y_train=Y_train,X_test=X_test,Y_test=Y_test,models=models,param=params )
             
-            # best score
-            best_model_score=max(sorted(model_report.values()))
+            # # best score
+            # best_model_score=max(sorted(model_report.values()))
             
             # best model
             best_model_score = max(model_report.values())
