@@ -208,4 +208,4 @@ No environment variables are defined or required by the current codebase.
 
 ## Author
 
-**Iqrar** — `iqrara629@gmail.com` (from `setup.py`)
+**Iqrar** — `iqrara629@gmail.com`
