@@ -9,4 +9,5 @@ xgboost
 DecisionTree
 catboost
 flask
+gunicorn
 -e .
