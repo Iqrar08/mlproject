@@ -187,21 +187,7 @@ The container installs dependencies from `requirements.txt` and runs `python app
 
 No environment variables are defined or required by the current codebase.
 
-## Screenshots / Demo
 
-The prediction UI (served from `templates/home.html`):
-
-**Header**
-![Header](screenshots/header.png)
-
-**Hero section**
-![Hero section](screenshots/hero.png)
-
-**Feature highlight**
-![Feature highlight](screenshots/feature-highlight.png)
-
-**Prediction form**
-![Prediction form](screenshots/prediction-form.png)
 
 ## Limitations
 
